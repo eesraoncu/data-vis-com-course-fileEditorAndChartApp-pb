@@ -11,7 +11,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        JFrame frame = new JFrame("Data Visualization Tool");
+        JFrame frame = new JFrame("Data Visualization Tools");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1000, 700);
         frame.setLocationRelativeTo(null);
@@ -21,8 +21,7 @@ public class Main {
         CSVEditorPanel editorPanel = new CSVEditorPanel();
         tabbedPane.addTab("CSV Editor", editorPanel);
 
-        JPanel lineBarPanel = new JPanel(new BorderLayout());
-        lineBarPanel.add(new JLabel("Line and Bar Charts will be here", SwingConstants.CENTER));
+        LineBarChartPanel lineBarPanel=new LineBarChartPanel(editorPanel.getTableModel());
         tabbedPane.addTab("Line & Bar Charts", lineBarPanel);
 
         JPanel piePanel = new JPanel(new BorderLayout());
