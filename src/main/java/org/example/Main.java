@@ -21,11 +21,10 @@ public class Main {
         CSVEditorPanel editorPanel = new CSVEditorPanel();
         tabbedPane.addTab("CSV Editor", editorPanel);
 
-        LineBarChartPanel lineBarPanel=new LineBarChartPanel(editorPanel.getTableModel());
+        LineBarChartPanel lineBarPanel = new LineBarChartPanel(editorPanel.getTableModel());
         tabbedPane.addTab("Line & Bar Charts", lineBarPanel);
 
-        JPanel piePanel = new JPanel(new BorderLayout());
-        piePanel.add(new JLabel("Pie Chart (Trigonometry) will be here", SwingConstants.CENTER));
+        PieChartPanel piePanel = new PieChartPanel(editorPanel.getTableModel());
         tabbedPane.addTab("Pie Chart", piePanel);
 
         JPanel heatmapPanel = new JPanel(new BorderLayout());
