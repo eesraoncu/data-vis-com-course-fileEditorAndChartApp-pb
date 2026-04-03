@@ -27,8 +27,7 @@ public class Main {
         PieChartPanel piePanel = new PieChartPanel(editorPanel.getTableModel());
         tabbedPane.addTab("Pie Chart", piePanel);
 
-        JPanel heatmapPanel = new JPanel(new BorderLayout());
-        heatmapPanel.add(new JLabel("Heatmap will be here", SwingConstants.CENTER));
+        HeatmapChartPanel heatmapPanel = new HeatmapChartPanel(editorPanel.getTableModel());
         tabbedPane.addTab("Heatmap", heatmapPanel);
 
         frame.add(tabbedPane);
